@@ -1,0 +1,360 @@
+\documentclass{article}
+\usepackage{mathtools, geometry, amssymb}
+\geometry{portrait, margin=1in}
+\pagestyle{empty}
+\begin{document}
+
+\Huge\textbf{Chapter 3}
+\vspace{16pt}
+
+\begin{center}
+\Large\textbf{3.1}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+\end{center}
+
+	\large\textbf{Derivative of a Constant Function}
+	$\>\> \frac{d}{dx} (c) = 0$
+	\vspace{12pt}
+
+	\large\textbf{Power Rule}
+	$\>\> \frac{d}{dx} (x)^n = nx^{n-1}$
+	\vspace{12pt}
+
+	\large\textbf{Constant Multiple Rule}
+	$\>\> \frac{d}{dx} [cf(x)] = c \frac{d}{dx} f(x)$
+	\vspace{12pt}
+
+	\large\textbf{Sum Rule}
+	$\>\> \frac{d}{dx} [f(x) + g(x)] = \frac{d}{dx} f(x) + \frac{d}{dx} g(x)$
+	\vspace{12pt}
+
+	\large\textbf{Difference Rule}
+	$\>\> \frac{d}{dx} [f(x) - g(x)] = \frac{d}{dx} f(x) - \frac{d}{dx} g(x)$
+	\vspace{12pt}
+
+	\large\textbf{Definition of the Number e} 
+	$\>\> \underset{h \to 0}{\lim} \dfrac{e^h - 1}{h} = 1$
+	\vspace{12pt}
+
+	\large\textbf{Derivative of the Natural Exponential Function}
+	$\>\> \frac{d}{dx} (e^x) = e^x$
+	\vspace{12pt}
+
+	\large\textbf{Derivative of the Exponential Function}
+	$\>\> \frac{d}{dx} (a^x) = a^x \ln a$
+	\vspace{16pt}
+
+\begin{center}
+\Large\textbf{3.2}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+\end{center}
+
+	\large\textbf{The Product Rule}
+	$\>\> \frac{d}{dx} [f(x)g(x)] = f(x) \frac{d}{dx} [g(x)] + g(x) \frac{d}{dx} [f(x)]$
+	\vspace{12pt}
+
+	\large\textbf{The Quotient Rule}
+	$\>\> \frac{d}{dx} [\frac{f(x)}{g(x)}] = \dfrac{g(x) \frac{d}{dx} [f(x)] - f(x) \frac{d}{dx} [g(x)]}{[g(x)]^2}$
+	\vspace{42pt}
+
+\begin{center}
+\Large\textbf{Table of Differentiation Formulas}
+\begin{large}
+\[\arraycolsep=16pt\def\arraystretch{2.5}
+\begin{array}{| l l l |}
+	\hline
+	\frac{d}{dx} (c) = 0 & \frac{d}{dx} (x^n) = nx^{n-1} & \frac{d}{dx} (e^x) = e^x \\
+	(cf)' = cf' & (f+g)' = f' + g' & (f-g)' = f'-g' \\
+	(fg)' = f'g + fg' & (\frac{f}{g})' = \dfrac{f'g - fg'}{g^2} & (a^x)' = a^x \ln a \\
+	[\medskipamount]
+	\hline
+\end{array}
+\]
+\end{large}
+\end{center}
+\pagebreak
+
+\begin{center}
+\Large\textbf{3.3}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+
+\large\textbf{Trig Identities}\\
+\end{center}
+\[\arraycolsep=16pt\def\arraystretch{2.5}
+\begin{array}{|c c|}
+	\hline
+	\underset{\theta \to 0}{\lim} \dfrac{sin\theta}{\theta} = 1 &
+	\underset{\theta \to 0}{\lim} \dfrac{cos\theta - 1}{\theta} = 0 \\
+	[\medskipamount]
+	\hline
+\end{array}
+	\]
+\vspace{12pt}
+
+\begin{center}
+\large\textbf{Derivatives of Trigonometric Functions}
+\begin{large}
+\[\arraycolsep=16pt\def\arraystretch{2.5}
+\begin{array}{| l l |}
+	\hline
+	\frac{d}{dx} sin(x) = cos(x) & \frac{d}{dx} csc (x) = -csc(x) cot(x) \\
+	\frac{d}{dx} cos(x) = -sin(x) & \frac{d}{dx} sec (x) = sec(x) tan(x) \\
+	\frac{d}{dx} tan(x) = sec^2(x) & \frac{d}{dx} cot (x) = -csc^2(x) \\
+	\hline
+\end{array}
+\]
+\end{large}
+\vspace{16pt}
+
+\Large\textbf{3.4}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+
+\large\textbf{The Chain Rule}\\
+\begin{large}
+\[\arraycolsep=12pt\def\arraystretch{2.1}
+\begin{array}{|l|}
+	\hline
+	F = f \circ g = f(g(x)) \\
+	F'(x) = f'(g(x)) * g'(x) \\
+	[\medskipamount]
+	\hline
+	\end{array} \mkern30mu 
+\begin{array}{|l|}
+	\hline
+	y = f(u), u = g(x) \\
+	\dfrac{dy}{dx} = \dfrac{dy}{du} \dfrac{du}{dx} \\
+	[\medskipamount]
+	\hline
+	\end{array}
+\]
+\end{large}
+\end{center}
+\vspace{16pt}
+
+\begin{center}
+\Large\textbf{3.5}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+
+\large\textbf{Derivatives of Inverse Trigonometric Functions}
+\begin{large}
+\[\arraycolsep=16pt\def\arraystretch{2.5}
+\begin{array}{| l l |}
+	\hline
+	\frac{d}{dx} sin^{-1}(x) = \dfrac{1}{\sqrt{1-x^2}} & \frac{d}{dx} csc^{-1}(x) =  -\dfrac{1}{x\sqrt{x^2-1}} \\
+	\frac{d}{dx} cos^{-1}(x) = -\dfrac{1}{\sqrt{1-x^2}} & \frac{d}{dx} sec^{-1}(x) = \dfrac{1}{x\sqrt{x^2-1}} \\
+	\frac{d}{dx} tan^{-1}(x) = \dfrac{1}{1+x^2} & \frac{d}{dx} cot^{-1}(x) =  -\dfrac{1}{1+x^2} \\
+	[\medskipamount]	
+	\hline
+\end{array}
+\]
+\end{large}
+\end{center}
+\pagebreak
+
+\begin{center}
+\Large\textbf{3.6}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{16pt}
+
+\large\textbf{Derivatives of Logorithmic Functions}
+\begin{large}
+\[\arraycolsep=16pt\def\arraystretch{2.5}
+\begin{array}{| l l l l|}
+	\hline
+	\dfrac{d}{dx} (\log_a x) = \dfrac{1}{x \ln a} & \dfrac{d}{dx} (\ln x) = \dfrac{x'}{x} & \dfrac{d}{dx} ln |x| = \dfrac{1}{x} & \dfrac{d}{dx} e^{f(x)} = e^{f(x)} f'(x) \\
+	[\medskipamount]	
+	\hline
+\end{array}
+\]
+\vspace{16pt}
+
+\large\textbf{Applying the Chain Rule to Derivatives of Logorithmic Functions}
+\[\arraycolsep=16pt\def\arraystretch{2.5}
+\begin{array}{| l l |}
+	\hline
+	\dfrac{d}{dx} (\ln u) = \dfrac{1}{u} \dfrac{du}{dx} & \dfrac{d}{dx} [\ln g(x)] = \dfrac{g'(x)}{g(x)} \\
+	[\medskipamount]	
+	\hline
+\end{array}
+\]
+\vspace{16pt}
+
+\large\textbf{The number $e$ as a Limit}
+\[\arraycolsep=16pt\def\arraystretch{2.5}
+\begin{array}{| l l |}
+	\hline
+	e = \underset{x \to 0}{\lim} (1+x)^{1/2} & e = \underset{n \to \infty}{\lim} \left(1+\dfrac{1}{n}\right)^n \\
+	[\medskipamount]	
+	\hline
+\end{array}
+\]
+\vspace{16pt}
+
+\large\textbf{Logarithmic Differentiation}
+\[\arraycolsep=16pt\def\arraystretch{1.5}
+\begin{tabular}{| l |}
+	\hline
+	\textbf{1.} Take natural logarithms of both sides of an equation and use Log Laws to Simplify. \\
+	\textbf{2.} Differentiate implicitly with respect to $x$. \\
+	\textbf{3.} Solve the resulting equation for $y'$ \\
+	\hline
+\end{tabular}
+\]
+\vspace{16pt}
+
+\large\textbf{Log Rules}
+\[\arraycolsep=16pt\def\arraystretch{1.5}
+\begin{array}{| l |}
+	\hline
+	log_b (mn) = log_b(m) + log_b(n) \\
+	log_b \frac{m}{n} = log_b(m) - log_b(n) \\
+	log_b (m^n) = n log_b(m) \\	
+	\hline
+\end{array}
+\]
+\vspace{16pt}
+\end{large}
+\end{center}
+\pagebreak
+
+\begin{center}
+\Large\textbf{3.10}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+
+
+\large\textbf{Linear Approximation}
+\[\arraycolsep=16pt\def\arraystretch{1.5}
+\begin{array}{| l |}
+	\hline
+	f(x) \approx f(a) + f'(a)(x-a) \\
+	L(x) = f(a) + f'(a)(x-a) \\
+	\hline
+\end{array}
+\]
+\vspace{12pt}
+
+\large\textbf{Differentials}
+\[\arraycolsep=16pt\def\arraystretch{1.5}
+\begin{array}{| l |}
+	\hline
+	dy = f'(x)dx \\
+	\Delta y = f(x + \Delta x) - f(x) \\
+	\hline
+\end{array}
+\]
+\end{center}
+\vspace{16pt}
+
+\begin{center}
+\Large\textbf{3.11}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+
+\large\textbf{Definition of Hyperbolic Functions}
+\begin{large}
+\[\arraycolsep=16pt\def\arraystretch{2.5}
+\begin{array}{| l l |}
+	\hline
+	sinh\> x = \dfrac{e^x - e^{-x}}{2} & csch\> x = \dfrac{1}{sinh\> x} \\
+	cosh\> x = \dfrac{e^x + e^{-x}}{2} & sech\> x = \dfrac{1}{cosh\> x} \\
+	tanh\> x = \dfrac{sinh\> x}{cosh\> x} & coth\> x = \dfrac{cosh\> x}{sinh\> x} \\
+	[\medskipamount]	
+	\hline
+\end{array}
+\]
+\vspace{12pt}
+
+\large\textbf{Hyperbolic Identities}
+\[\arraycolsep=16pt\def\arraystretch{2}
+\begin{array}{| l l |}
+	\hline
+	sinh(-x) = -sinh\> x & cosh(-x) = cosh\> x \\
+	cosh^2x - sinh^2 x = 1 & 1 - tanh^2x = sech^2 x \\
+	\multicolumn{2}{|l|} {sinh(x+y) = sinh\> x \>\> cosh\> y +cosh\> x \>\> sinh\> y} \\
+	\multicolumn{2}{|l|} {cosh(x+y) = cosh\> x \>\> cosh\> y +sinh\> x \>\> sinh\> y} \\
+	[\medskipamount]	
+	\hline
+\end{array}
+\]
+\end{large}
+\end{center}
+\pagebreak
+
+\begin{center}
+\Large\textbf{3.11}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+
+\large\textbf{Derivatives of Hyperbolic Functions}
+\begin{large}
+\[\arraycolsep=16pt\def\arraystretch{2}
+\begin{array}{| l l |}
+	\hline
+	\frac{d}{dx} (sinh\> x) = cosh\> x & \frac{d}{dx} (csch\> x) = -csch\> x \>\> coth\> x \\
+	\frac{d}{dx} (cosh\> x) = sinh\> x & \frac{d}{dx} (sech\> x) = -sech\> x \>\> tanh\> x \\
+	\frac{d}{dx} (tanh\> x) = sech^2 x & \frac{d}{dx} (coth\> x) = -csch^2 x \\
+	[\medskipamount]	
+	\hline
+\end{array}
+\]
+\vspace{12pt}
+
+\large\textbf{Inverse Hyperbolic Functions}
+\[\arraycolsep=16pt\def\arraystretch{2}
+\begin{array}{| l |}
+	\hline
+	y = sinh^{-1} x \Leftrightarrow sinh\> y = x \\
+	y = cosh^{-1} x \Leftrightarrow cosh\> y = x \>\>\> \text{and} \>\>\> y \geq 0 \\
+	y = tanh^{-1} x \Leftrightarrow tanh\> y = x \\
+	[\medskipamount]	
+	\hline
+\end{array}
+\]
+\vspace{12pt}
+
+\large\textbf{Inverse Hyperbolic Functions in Logarithmic Terms}
+\[\arraycolsep=16pt\def\arraystretch{2}
+\begin{array}{| l |}
+	\hline
+	sinh^{-1} x = ln(x+ \sqrt{x^2 + 1}) \>\>\>\>\> x \in \mathbb{R} \\
+	cosh^{-1} x = ln(x + \sqrt{x^2 - 1}) \>\>\>\>\> x \geq 1 \\
+	tanh^{-1} x = \dfrac{1}{2} ln \left( \dfrac{1+x}{1-x} \right)t \>\>\>\>\> -1 < x < 1 \\
+	[\medskipamount]	
+	\hline
+\end{array}
+\]
+\vspace{12pt}
+
+\large\textbf{Derivatives of Inverse Hyperbolic Functions}
+\[\arraycolsep=16pt\def\arraystretch{2.5}
+\begin{array}{| l l |}
+	\hline
+	\frac{d}{dx} (sinh^{-1} x) = \dfrac{1}{\sqrt{1 + x^2}} & \frac{d}{dx} (csch^{-1} x) = -\dfrac{1}{|x| \sqrt{x^2 + 1}} \\
+	\frac{d}{dx} (cosh^{-1} x) = \dfrac{1}{\sqrt{x^2 - 1}} & \frac{d}{dx} (sech^{-1} x) = -\dfrac{1}{x \sqrt{1 - x^2}} \\
+	\frac{d}{dx} (tanh^{-1} x) = \dfrac{1}{1 - x^2} & \frac{d}{dx} (coth^{-1} x) = \dfrac{1}{1 - x^2}\\
+	[\medskipamount]	
+	\hline
+\end{array}
+\]
+\vspace{12pt}
+
+\end{large}
+\end{center}
+
+\end{document}
+
