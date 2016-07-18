@@ -1,7 +1,16 @@
 \documentclass{article}
 \usepackage{mathtools, geometry, amssymb, booktabs, array, tabularx, enumitem, pgfplots, tikz}
-\usetikzlibrary{decorations.markings, calc}
+\usetikzlibrary{decorations.markings, calc, intersections}
 \pgfplotsset{compat=1.9}
+\pgfplotsset{my style/.append style={
+	ticks=none, 
+	clip=false,
+	x=1.25cm, y=1cm,
+	axis x line=left, axis y line=left, 
+	xlabel={$x$}, ylabel={$y$},
+	xlabel style={at={(current axis.right of origin)}, xshift=1.5ex, yshift=-9.5ex},
+	ylabel style={at={(current axis.above origin)}, yshift=1.5ex, anchor=center, rotate=-90} 
+	}}
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
 \geometry{portrait, margin=1in}
 \setlist{nosep}
@@ -225,7 +234,6 @@
 \end{tabularx}}
 \vspace{16pt}
 \end{center}
-%TODO: add example graphs from p 291, 293
 
 \begin{center}
 \large
@@ -244,8 +252,8 @@
 \begin{tabularx}{.9\textwidth}{|X|}
 \hline
 	\textbf{Concavity Test} \\
-	(a) If $f"(x) > 0$ for all $x$ in $I$, then the graph of $f$ is concave upward on $I$. \\
-	(b) If $f"(x) < 0$ for all $x$ in $I$, then the graph of $f$ is concave downward \\ \hspace{16pt} on $I$. \\
+	(a) If $f''(x) > 0$ for all $x$ in $I$, then the graph of $f$ is concave upward on $I$. \\
+	(b) If $f''(x) < 0$ for all $x$ in $I$, then the graph of $f$ is concave downward \\ \hspace{16pt} on $I$. \\
 \hline
 \end{tabularx}}
 \vspace{16pt}
@@ -265,15 +273,268 @@
 {\setlength{\tabcolsep}{16pt}
 \begin{tabularx}{.9\textwidth}{|X|}
 \hline
-	\textbf{The Second Derivative Test} \: Suppose $f"$ is continuous near $c$. \\
-	(a) If $f'(c) = 0$ and $f"(c) > 0$, then $f$ has a local minimum at $c$. \\
-	(b) If $f'(c) = 0$ and $f"(c) < 0$, then $f$ has a local maximum at $c$. \\
+	\textbf{The Second Derivative Test} \: Suppose $f''$ is continuous near $c$. \\
+	(a) If $f'(c) = 0$ and $f''(c) > 0$, then $f$ has a local minimum at $c$. \\
+	(b) If $f'(c) = 0$ and $f''(c) < 0$, then $f$ has a local maximum at $c$. \\
 \hline
 \end{tabularx}}
 \vspace{16pt}
 \end{center}
 \pagebreak
 
+%TODO: add example graphs from p 291, 293
+% 
+%\begin{tikzpicture}
+%\begin{axis}[
+%	my style,
+% 	xmin=0, xmax=4
+% 	]
+% \addplot[smooth, color=cyan, domain=0:4]{-(x-2)^2 + 2};
+% \addplot[dotted,mark options={scale=5,solid}] coordinates{(2,-2) (2,2)}
+%	node[scale=1, below, pos=1, yshift=-22ex, xshift=0ex]{\color{black}{$c$}};
+% \addplot[smooth, color=magenta, domain=.5:1.75]{1.5*x-.4375} 
+%	node[scale=.75, left, pos=.5, yshift=3ex, xshift=1ex]{\color{black}{$f'(x)>0$}};
+% \addplot[smooth, color=magenta, domain=2.25:3.5]{5.5625-1.5*x}
+% 	node[scale=.75, right, pos=.5, yshift=3ex, xshift=0ex]{\color{black}{$f'(x)<0$}};
+% \end{axis}
+% \end{tikzpicture}
+%
+
+\begin{center}
+\Large\textbf{4.4 Indeterminate Forms and l'Hopital's Rule}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{24pt}
+
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{l'Hopital's Rule} \: Suppose $f$ and $g$ are differentiable on an open interval $I$ that contains $a$ (except possibly at $a$). Suppose that 
+	\begin{center}
+	$\underset{x \to a}{\lim} f(x) = 0$ \hspace{36pt} and \hspace{36pt} $\underset{x \to a}{\lim} g(x) = 0$
+	\end{center}
+	or that 
+	\begin{center}
+	$\underset{x \to a}{\lim} f(x) = \pm \infty$ \hspace{36pt} and \hspace{36pt} $\underset{x \to a}{\lim} g(x) = \pm \infty$
+	\end{center}
+	(In other words, we have an indeterminate form of type $\frac{0}{0}$ or $\frac{\infty}{\infty}$.) Then 
+	\begin{center}
+	$\underset{x \to a}{\lim} \dfrac{f(x)}{g(x)} = \underset{x \to a}{\lim} \dfrac{f'(x)}{g'(x)}$
+	\end{center}
+	if the limit on the right side exists (or is $\infty$ or $-\infty$).
+	\\[10pt]
+	\hline
+\end{tabularx}}
+\end{center}
+
+\begin{center}
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Indeterminate Products} \: \\\vspace{1pt}
+	If $\underset{x \to a}{\lim} f(x)=0$ and $\underset{x \to a}{\lim} g(x)=\infty$, it isn't clear what the value of $\underset{x \to a}{\lim} [f(x) g(x)]$, if any, will be.  \\\vspace{1pt} 
+	This kind of limit is called an \textbf{indeterminate form of type} \textbf{$0 \cdot \infty$}. \\ 
+	We can resolve it by writing the product $fg$ as a quotient: 
+	\begin{center}
+	$fg = \dfrac{f}{1/g}$ \hspace{12pt} or \hspace{12pt} $fg = \dfrac{g}{1/f}$
+	\end{center}
+	\\
+	\hline
+\end{tabularx}}
+\end{center}
+
+\begin{center}
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Indeterminate Differences} \: \\\vspace{1pt}
+	If $\underset{x \to a}{\lim} f(x)=\infty$ and $\underset{x \to a}{\lim} g(x)=\infty$, it isn't clear what the value of \\
+	$\underset{x \to a}{\lim} [f(x) - g(x)]$, if any, will be.  \\\vspace{1pt} 
+	This kind of limit is called an \textbf{indeterminate form of type} \textbf{$\infty - \infty$}. \\\vspace{1pt} 
+	We can resolve it by converting the difference into a quotient (e.g. by using a common denominator, or rationalization, or factoring) so that we have an indeterminate form of type $\frac{0}{0}$ or $\infty / \infty$.
+	\\[12pt]
+	\hline
+\end{tabularx}}
+\end{center}
+\pagebreak
+
+\begin{center}
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Indeterminate Powers} \: \\\vspace{1pt}
+	Several indeterminate forms arise from the limit $\underset{x \to a}{\lim} [f(x)]^{g(x)}$. \\
+	{\begin{tabular}{l l l l}
+	$\underset{x \to a}{\lim} f(x)=0$  & and &  $\underset{x \to a}{\lim} g(x)=0$ & \hspace{32pt} type $0^0$ \\
+	$\underset{x \to a}{\lim} f(x)=\infty$  & and &  $\underset{x \to a}{\lim} g(x)=0$ & \hspace{32pt} type $\infty^0$ \\
+	$\underset{x \to a}{\lim} f(x)=1$ & and & $\underset{x \to a}{\lim} g(x)=\pm\infty$ & \hspace{32pt} type $1^\infty$ \\
+	\end{tabular}}
+	\\
+	\vspace{1pt}
+	Each of these three cases can be treated either by taking the natural \\ logarithm: 
+	\begin{center}
+	let \hspace{12pt} $y=[f(x)]^{g(x)}$, \hspace{12pt} then \hspace{12pt} $ln \> y = g(x) \> ln f(x)$ \\
+	\end{center} \\
+	or by writing the function as an exponential:
+	\begin{center}
+	$[f(x)]^{g(x)} = e^{g(x) \> ln \> f(x)}$ \\
+	\end{center} \\
+	\hline
+\end{tabularx}}
+\end{center}
+\vspace{24pt}
+
+\begin{center}
+\Large\textbf{4.5 Summary of Curve Sketching}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{24pt}
+
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{5pt}
+	\textbf{Guidelines for Sketching a Curve} \\[5pt]
+	1. Domain \\
+	2. Intercepts \\
+	3. Symmetry \\
+	4. Asymptotes \\
+	5. Intervals of Increase or Decrease \\
+	6. Local Maximum and Minimum Values \\
+	7. Concavity and Points of Inflection \\
+	8. Sketch the Curve \\[12pt]
+	
+\hline
+\end{tabularx}}
+\end{center}
+\pagebreak
+
+
+\begin{enumerate}[leftmargin=5pt, labelindent=16pt]
+	\item \textbf{Domain} \: Determine the domain $D$ of $f$, the set of values of $x$ for which $f(x)$ is defined. \\
+	\item \textbf{Intercepts} \: The $y$-intercept is $f(0)$, which tells us where the curve intersects the $y$-axis.  To find the $x$-intercepts, set $y=0$ and solve for $x$. \\
+	\item \textbf{Symmetry} \: \vspace{5pt}
+
+		\begin{enumerate}[label=(\roman*)]
+		\item If $f(-x) = f(x)$ for all $x$ in $D$, then $f$ is an \textbf{even function} and the curve is symmetric about the $y$-axis. \vspace{5pt}
+		\item If $f(-x) = -f(x)$ for all $x$ in $D$, then $f$ is an \textbf{odd function} and the curve is symmetric about the origin. \vspace{5pt}
+		\item If $f(x+p) = f(x)$ for all $x$ in $D$, where $p$ is a positive constant, then $f$ is called a \textbf{periodic function} and the smallest such number $p$ is called the \textbf{period}. \\
+		\end{enumerate}
+	\item \textbf{Asymptotes} \: \vspace{5pt}
+
+		\begin{enumerate}[label=(\roman*)]
+		\item \textit{Horizontal Asymptotes} \: If either $\underset{x \rightarrow \infty}{\lim} f(x) = L$ or  $\underset{x \rightarrow -\infty}{\lim} f(x) = L$, then the line $y=L$ is a horizontal asymptote of the curve $y=f(x)$. If $\underset{x \rightarrow \infty}{\lim} f(x) = \infty$ or $-\infty$, then we do not have an asymptote to the right. \vspace{5pt}
+		\item \textit{Vertical Asymptotes} \: The line $x=a$ is a vertical asymptote if at least one of the following statements is true: (For rational functions you can locate the vertical asymptotes by equating the denominator to $0$ after cancelling common factors.) If $f(a)$ is not defined but $a$ is an endpoint of the domain of $f$, then compute  $\underset{x \rightarrow a^-}{\lim} f(x)$ or  $\underset{x \rightarrow a^+}{\lim} f(x)$, whether or not this limit is infinite. \vspace{5pt}
+		\item \textit{Slant Asymptotes}\\
+		\end{enumerate}
+	\item \textbf{Intervals of Increase or Decrease} \: Use the I/D Test. Compute $f'(x)$ and find the intervals on which $f'(x)$ is positive ($f$ is increasing) and the intervals on which $f'(x)$ is nevative ($f$ is decreasing). \\
+	\item \textbf{Local Maximum and Minimum Values} \: Find the critical numbers of $f$ (the numbers $c$ where $f'(c)=0$ or $f'(c) \: DNE$). Then use the First Derivative Test. If $f'$ changes from positive to negative at a critical number $c$, then $f(c)$ is a local maximum. If $f'$ changes from negative to positive at $c$, then $f(c)$ is a local minimum. Although it is usually preferable to use the First Derivative Test, you can use the Second Derivative Test if $f'(c) = 0$ and $f''(c) \ne 0$. Then $f''(c) > 0$ implies that $f(c)$ is a local minimum, wheras $f''(c)<0$ implies that $f(c)$ is a local maximum. \\
+	\item \textbf{Concavity and Points of Inflection} \: Compute $f''(x)$ and use the Concavity Test. The curve is concave upward where $f''(x) > 0$ and concave downward where $f''(x) < 0$. Inflection points occur where the direction of concavity changes. \\
+	\item \textbf{Sketch the Curve} \: Using the information in items 1-7, draw the graph. Sketch the asymptotes as dashed lines. Plot the intercepts, maximum and minimum points, and inflection points. Then make the curve pass through these points.	
+\end{enumerate}
+\pagebreak
+
+\begin{center}
+\Large\textbf{4.7 Optimization Problems}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{24pt}
+
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\Large \textbf{Steps in Solving Optimization Problems} \\
+	\begin{enumerate}
+	\item \textbf{Understand the Problem} \: Read the problem carefully until it is clearly understood. Ask: What is the unknown? What are the given quantities? What are the given conditions? \vspace{5pt}
+	\item \textbf{Draw a Diagram} \: Draw a diagram and identify the given and required quantities on the diagram. \vspace{5pt}
+	\item \textbf{Introduce Notation} \: Assign a symbol to the quantity that is to be maximized or minimized (e.g. $Q$). Also select symbols $(a, b, c, ..., x, y)$ for other unknown quantities and label the diagram with these symbols. It may help to use initials as suggestive symbols--for example, $A$ for area, $h$ for height, $t$ for time, etc. \vspace{5pt}
+	\item Express $Q$ in terms of some of the other symbols from Step 3. \vspace{5pt}
+	\item If $Q$ has been expressed as a function of more than one variable in Step 4, use the given information to find relationships (in the form of equations) among these variables. Then use these equations to eliminate all but one of the variables in the expression for $Q$. Thus $Q$ will be expressed as a function of \textit{one} variable $x$, say, $Q = f(x)$. Write the domain of this function. \vspace{5pt}
+	\item Use the methods of Sections 4.1 and 4.3 to find the \textit{absolute} maximum or minimum value of $f$. In particular, if the domain of $f$ is a closed interval, then the Closed Interval Method in Section 4.1 can be used.
+	\end{enumerate}\\
+	
+\hline
+\end{tabularx}}
+\vspace{24pt}
+
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{First Derivative Test for Absolute Extreme Values} \: Suppose that $c$ is a critical number of a continuous function $f$ defined on an interval. \\
+	(a) \: If $f'(x)  > 0$ for all $x<c$ and $f'(x) < 0$ for all $x>c$, then $f(c)$ is the absolute maximum value of $f$. \\
+	(b) \: If $f'(x) < 0$ for all $x<c$ and $f'(x) > 0$ for all $x>c$, then $f(c)$ is the absolute minimum value of $f$. \\[12pt]	
+\hline
+\end{tabularx}}
+\end{center}
+\pagebreak
+
+\begin{center}
+\Large\textbf{4.9 Antiderivatives}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{24pt}
+
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Definition} \: A function $F$ is called an \textbf{antiderivative} of $f$ on an interval $I$ if $F'(x) = f(x)$ for all $x$ in $I$. \\[12pt]
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Theorem} \: If $F$ is an antiderivative of $f$ on an interval $I$, then the most general antiderivative of $f$ on $I$ is $F(x) + C$, where $C$ is an arbitrary constant. \\[12pt]
+\hline
+\end{tabularx}}
+\vspace{24pt}
+
+\large
+\def\arraystretch{2}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{| X | l || X | l |}
+\hline
+	
+	\textbf{Function} & \textbf{Antiderivative} & \textbf{Function} & \textbf{Antiderivative}  \\
+	\hline
+	$c \: f(x)$ & $c \: F(x)$ & $sec^2 x$ & $tan x$  \\
+	$f(x) + g(x)$ & $F(x) + G(x)$ & $secx \: tanx$ & $sec x$ \\[12pt]
+	$x^n \: (n \ne -1)$ & $\dfrac{x^{n+1}}{n+1}$ & $\dfrac{1}{\sqrt{1-x^2}}$ & $sin^{-1} x$ \\[16pt]
+	$\dfrac{1}{x}$ & $ln |x|$ & $\dfrac{1}{1+x^2}$ & $tan^{-1} x$ \\[7pt]
+	$e^x$ & $e^x$ & $coshx$ & $sinhx$ \\
+	$cosx$ & $sinx$ & $sinhx$ & $coshx$ \\
+	$sinx$ & $-cosx$ & & \\
+	
+\hline
+\end{tabularx}}
+\end{center}
 
 \end{document}
 
