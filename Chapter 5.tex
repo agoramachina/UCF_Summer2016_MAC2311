@@ -1,0 +1,271 @@
+\documentclass[fleqn]{article}
+\usepackage{geometry, mathtools, amssymb, tabularx}
+\geometry{portrait, margin=.75in}
+\pagestyle{empty}
+\begin{document}
+
+\Huge\textbf{Chapter 5}
+\vspace{16pt}
+
+\begin{center}
+\Large\textbf{5.1 Areas and Distance}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	The \textbf{area} $A$ of the region $S$ that lies under the graph of the continuous function $f$ is the limit of the sum of the areas of approximating rectangles: \\[10pt]
+
+	$A = \underset{n \to \infty}{\lim} R_n = \underset{n \to \infty}{\lim} [f(x_1) \Delta x + f(x_2) \Delta x + ... + f(x_n) \Delta x]$ \\[10pt]
+	$A = \underset{n \to \infty}{\lim} L_n = \underset{n \to \infty}{\lim} [f(x_0) \Delta x + f(x_1) \Delta x + ... + f(x_n-1) \Delta x]$ \\[10pt]
+	$A = \underset{n \to \infty}{\lim} [f(x_1^*) \Delta x + f(x_2^*) \Delta x + ... + f(x_n^*) \Delta x]$ \\[16pt]
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\begin{itemize}
+	\item Use left endpoints for underestimation, right endpoints for overestimation. 
+	\item Take the height of the $i$th rectangle to be the value of $f$ at any number $x_i^*$ in the $i$th subinterval $[x_{i-1}, x_i]$. The numbers $x_1^*, x_2^*, ... , x_n^*$ are called \textbf{sample points}.
+	\item $\Delta x = \dfrac{b-a}{n}$ 
+	\item \textbf{Formula for the sum of the squares}: $1^2 + 2^2 +3^2 + ... + n^2 = \dfrac {n(n+1)(2n+1)}{6}$
+	\item Use \textbf{sigma notation} to write sums with many terms more compactly. For example:  \[\sum_{i=1}^n f(x_i) \Delta x = f(x_1) \Delta x + f(x_2) \Delta x + ... + f(x_n) \Delta x\]
+	\item The formula for the sum of the squares can be rewritten: \[\sum_{i=1}^n i^2 = \dfrac{n(n+1)(2n+1)}{6}\]
+	\item The area formulas can be rewritten: 
+		\[A = \underset{n \to \infty}{\lim} \sum_{i=1}^n f(x_i) \Delta x\]
+		\[A = \underset{n \to \infty}{\lim} \sum_{i=1}^n f(x_{i-1}) \Delta x\]
+		\[A = \underset{n \to \infty}{\lim} \sum_{i=1}^n f(x_i^*) \Delta x\]
+%	\item Exact distance $d$ traveled is the limit of the expressions:
+%		\[d = \underset{n \to \infty}{lim} \sum_{i=1}^n f(t_{i-1}) \Delta t = \underset{n \to \infty}{\lim} \sum_{i=1}^n f(t) \Delta t\]
+\end{itemize}
+\end{center}
+\pagebreak
+
+\begin{center}
+\Large\textbf{5.2 The Definite Integral}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	If $f$ is a function defined for $a \leq x \leq b$, we divide the interval $[a, b]$ into $n$ subintervals of equal width $\Delta x = (b-a)/n$. We let $x_0(=a), x_1, x_2, ..., x_n(=b)$ be the endpoints of these subintervals and we let $x_1^*, x_2^*, ..., x_n^*$ be any \textbf{sample points} in these subintervals, so $x_i^*$ lies in the $i$th subinterval $[x_{i-1}, x_i]$. Then the \textbf{definite integral of $f$ from $a$ to $b$} is
+	$$\int_a^b f(x) dx = \underset{n \to \infty}{\lim} \sum_{i=1}^n f(x_i^*) \Delta x$$
+	provided that this limit exists and gives the same value for all possible choices of sample points. If it does exist, we say that $f$ is \textbf{integrable} on $[a,b]$.\\[16pt]
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\begin{itemize}
+	\item The sum \hspace{3pt} $\sum\limits_{i=1}^n f(x_i^*) \Delta x$ \hspace{3pt} is called a \textbf{Riemann sum}
+	\item A definite integral can be interpreted as a \textbf{net area}, that is, a difference of areas:
+	\[\int_a^b f(x) dx = A_1 - A_2\]
+	where $A_1$ is the area of the region above the $x$-axis and below the graph of $f$, and $A_2$ is the area of the region below the $X$-axis and above the graph of $f$.
+\end{itemize}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	If $f$ is integrable on $[a,b]$, then 
+	$$\int_a^b f(x) dx = \underset{n \to \infty}{\lim} \sum_{i=1}^n f(x_i) \Delta x $$
+	where \hspace{5pt} $\Delta x = \dfrac{b-a}{n}$ \hspace{5pt} and \hspace{5pt} $x_i = a+i \Delta x$\\[16pt]
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Midpoint Rule}
+	$$ \int_a^b f(x) dx \approx \sum_{i=1}^n f(\bar x_i) \Delta x = \Delta x [f(\bar x_1) + ... + f(\bar x_n)] $$ 
+	where \hspace{16pt} $\Delta x = \dfrac{b-a}{n}$ \\[12pt]
+	and \hspace{30pt} $\bar x_i = \frac{1}{2} (x_{i-1} + x_i)$ \hspace{5pt} = \hspace{5pt} midpoint of \hspace{5pt} $[x_{i-1}, x_i]$ \\[12pt]
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Properties of the Integral}
+	\[\int_a^b c \: dx = c(b-a), \text{\hspace{5pt} where $c$ is any constant}\]
+	\[\int_a^b [f(x) + g(x)] \: dx = \int_a^b f(x) \: dx + \int_a^b g(x) \: dx\]
+	\[\int_a^b c \: f(x) \: dx = c \int_a^b f(x) \: dx, \text{\hspace{5pt} where $c$ is any constant}\]
+	\[\int_a^b [f(x) - g(x)] \: dx = \int_a^b f(x) \: dx - \int_a^b g(x) \: dx\]
+	\[\int_a^c f(x) \: dx + \int_c^b f(x) \: dx = \int_a^b f(x) \: dx\]\\
+	\textbf{Comparison Properties of the Integral} \\[10pt]
+	If $f(x) \geq 0$ for $a \leq x \leq b$, then \[\int_a^b f(x) \: dx \geq 0\]
+	If $f(x) \geq g(x)$ for $a \leq x \leq b$, then \[\int_a^b f(x) \: dx \geq \int_a^b g(x) \: dx\]
+	If $m \leq f(x) \leq M$ for $a \leq x \leq b$, then \[m(b-a) \leq \int_a^b f(x) \: dx \leq M(b-a)\] \\
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	If we reverse $a$ and $b$, then $\Delta x$ changes from $\dfrac{(b-a)}{n}$ to $\dfrac{(a-b)}{n}$. \\ 		Therefore:
+	$$ \int_b^a f(x) dx = - \int_a^b f(x) dx $$
+	If \hspace{5pt} $a=b$, \hspace{5pt} then \hspace{5pt} $\Delta x = 0$ \hspace{5pt} and so: 
+	$$ \int_a^a f(x) dx = 0 $$ \\
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{.1}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X X|}
+\hline
+	\vspace{14pt} \textbf{Formulas for sums of powers} & \vspace{14pt} \textbf{Rules for sigma notation}\\[10pt]
+	\[ \sum_{i=1}^n i = \dfrac{n(n+1)}{2} \] & \[ \sum_{i=1}^n c = nc \] \\	
+	\[ \sum_{i=1}^n i^2 = \dfrac{n(n+1)(2n+1)}{6} \] & \[ \sum_{i=1}^n ca_i = c \sum_{i=1}^n a_i \] \\
+	\[ \sum_{i=1}^n i^3 = \left[ \dfrac{n(n+1)}{2} \right]^2 \] & \[ \sum_{i=1}^n (a_i + b_i) = \sum_{i=1}^n a_i + \sum_{i=1}^n b_i \] \\
+	& \[ \sum_{i=1}^n (a_i - b_i) = \sum_{i=1}^n a_i - \sum_{i=1}^n b_i \] \\[5pt]
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\vspace{32pt}
+\Large\textbf{5.3 The Fundamental Theorem of Calculus}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\textbf{The Fundamental Theorem of Calculus, Part 1} \:\: If $f$ is continuous on $[a,b]$, then the function $g$ defined by 
+	$$ g(x) = \int_a^x f(t) dt \text{\hspace{24pt}} a \leq x \leq b$$
+	is continuous on $[a,b]$ and differentiable on $(a,b)$ and $g'(x) = f(x)$\\
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\textbf{The Fundamental Theorem of Calculus, Part 2} \:\: If $f$ is continuous on $[a,b]$, then 
+	$$\int_a^b f(x) dx = F(b) - F(a)$$
+	where $F$ is any antiderivative of $f$, that is, a function such that $F' = f$\\
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\textbf{The Fundamental Theorem of Calculus} \:\: Suppose $f$ is continuous on $[a,b]$.	
+	\[\text{\hspace{-20pt}\textbf{1.} \: If }g(x) = \int_a^x f(t) dt \text{, \hspace{5pt} then }g'(x) = f(x)\]
+	\[\text{\textbf{2.} \: }\int_a^b f(x) dx = F(b) - F(a)\text{, where $F$ is any antiderivative of $f$, that is, $F' = f$}\]\\
+\hline
+\end{tabularx}}
+\vspace{12pt}
+\pagebreak
+
+\Large\textbf{5.4 Indefinite Integrals and the Net Change Theorem}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+\large
+
+\begin{itemize}
+	\item The notation $\int f(x) dx$ is traditionally used for an antiderivative of $f$ and is called an \textbf{indefinite integral}. Thus $\int f(x) dx = F(x) \text{ means } F'(x) = f(x)$
+	\item Distinguish carefully between definite and indefinite integrals. A definite integral $\int_a^b f(x) dx$ is a \textit{number}, whereas an indefinite integral $\int f(x) dx$ is a \textit{function} (or family of functions).
+	\item If $f$ is continuous on $[a,b]$, then $\int_a^b f(x) dx = \int f(x) dx \big|_a^b$
+\end{itemize}
+\vspace{24pt}
+
+\Large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X X|}
+\hline
+	\large\textbf{Table of Indefinite Integrals} & \\[5pt]
+	$\int cf(x)dx = c \int f(x)dx$ & $\int [f(x) + g(x)]dx =$ \\[10pt]
+	$\int k \> dx = kx + C$ & $\int f(x) + \int g(x)dx$ \\[10pt] 
+	$\int x^n dx = \dfrac{x^{n+1}}{n+1} + C \hspace{5pt} (n \ne -1)$ & $\int \dfrac{1}{x} dx = ln|x| + C$ \\[10pt]
+	$\int e^x dx = e^x + C$ & $\int a^x dx = \dfrac{a^x}{ln \> a} + C$ \\[10pt]
+	$\int sinx\>dx = -cosx + C$ & $\int cosx\>dx = sinx +C$ \\[10pt]
+	$\int sec^2x\>dx = tanx + C$ & $\int csc^2x\>dx = -cotx + C$ \\[10pt]
+	$\int secx\>tanx\>dx = secx +C$ & $\int cscx\>cotx\>dx = -cscx + C$ \\[10pt]
+	$\int \dfrac{1}{x^2+1} dx = tan^{-1}x + C$ & $\int \dfrac{1}{\sqrt{1-x^2}} dx = sin^{-1} x + C$ \\[10pt]
+	$\int sinhx \> dx = coshx + C$ & $\int coshx \> dx = sinhx + C$\\[10pt]
+\hline
+\end{tabularx}}
+\vspace{24pt}
+
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Net Change Theorem} \: The integral of a rate of change is the net change:
+	$$\int_a^b F'(x)dx = F(b)-F(a)$$\\
+\hline
+\end{tabularx}}
+\vspace{12pt}
+\pagebreak
+
+\Large\textbf{5.5 The Substitution Rule}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+\large
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{The Substitution Rule} \: If $u = g(x)$ is a differentiable function whose range is an interval $I$ and $f$ is continuous on $I$, then
+	$$\int f(g(x)) \: g'(x)dx = \int f(u)du$$\\
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{The Substitution Rule for Definite Integrals} \: If $g'$ is continuous on $[a,b]$ and $f$ is continuous on the range of $u = g(x)$, then
+	$$ \int_a^b f(g(x)) \: g'(x) dx = \int_{g(a)}^{g(b)} f(u) du$$\\
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Integrals of Symmetric Functions} \: Suppose $f$ is continuous on $[-a,a]$.\\[5pt]
+	(a) \:\:\: If $f$ is even $[f(-x) = f(x)]$, then $\int_{-a}^a f(x) dx = 2 \int_0^a f(x) dx$\\[5pt]
+	(b) \:\:\: If $f$ is odd $[f(-x) = -f(x)]$, then $\int_{-a}^a f(x) dx = 0$\\[14pt]
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\end{center}
+\end{document}
