@@ -1,0 +1,512 @@
+\documentclass[fleqn]{article}
+\usepackage{geometry, mathtools, bm, amssymb, tabularx}
+\geometry{portrait, margin=.75in}
+\pagestyle{empty}
+\begin{document}
+
+\Huge\textbf{Chapter 1}
+\vspace{16pt}
+
+\begin{center}
+\Large\textbf{1.1 Functions and Models}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+
+\large
+\begin{itemize}
+	\item A \textbf{function} $f$ is a rule that assigns to each element $x$ in a set $D$ exactly one element, called $f(x)$, in a set $E$.
+	\item \textbf{The Vertical Line Test} \: A curve in the $xy$-plane is the graph of a function of $x$ if and only if no vertical line intersects the curve more than once.
+	\item \textbf{Piecewise defined functions} are functions that are defined by different formulas in different parts of their domains
+\vspace{12pt}
+\end{itemize}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	If $f$ satisfies $f(-x) = f(x)$ for every number $x$ in its domain, then $f$ is an \textbf{even function}.\\[5pt]
+	If $f$ satisfies $f(-x)  = -f(x)$ for every number $x$ in its domain, then $f$ is called an \textbf{odd function}.\\[12pt]
+\hline
+\end{tabularx}}
+\vspace{12pt}	
+	
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	A function $f$ is called \textbf{increasing} on an interval $I$ if\\ 
+	\hspace{12pt} $f(x_1) < f(x_2)$ \hspace{5pt} whenever $x_1 < x_2$ in $I$\\[5pt]
+	It is called \textbf{decreasing} on $I$ if\\
+	\hspace{12pt}$f(x_1) > f(x_2)$ \hspace{5pt} whenever $x_1 < x_2$ in $I$\\[12pt]
+	
+\hline
+\end{tabularx}}
+\vspace{36pt}	
+
+\Large\textbf{1.2 Mathematical Models}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Linear Models}
+	\begin{itemize}
+	\item If we say that $y$ is a \textbf{linear function} of $x$, we mean that the graph of the function is a line.
+	\item This means we can use the slope-intercept form of the equation to write a formula for the function as
+	$$y = f(x) = mx + b$$
+	\item A characteristic feature of linear functions is that they grow at a constant rate.
+	\end{itemize} \\
+\hline
+\end{tabularx}}
+\vspace{12pt}	
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Polynomials}
+	\begin{itemize}
+	\item A function $P$ is called a \textbf{polynomial} if
+	$$P(x) = a_nx^n + a_{n-1}x^{n+1} + ... + a_2x^2 + a_1x + a_0$$
+	where $n$ is a nonnegative integer and the numbers $a_0, a_1, ... a_n$ are constants called the \textbf{coefficients} of the polynomial.
+	\item The domain of any polynomial is $\mathbb{R} = (-\infty, \infty)$.
+	\item If the leading coefficient $a_n \ne 0$, then the \textbf{degree} of the polynomial is $n$.
+	\item A polynomial of degree $1$ is of the form $P(x) = mx +b$ and so it is a \textbf{linear function}. 
+	\item A polynomial of degree $2$ is of the form $P(x) = ax^2 + bx + c$ and is called a \textbf{quadratic function}. Its graph is always a parabola obtained by shifting the paraboly $y = ax^2$.  The parabola opens upward if $a>0$ and downward if $a<0$.
+	\item A polynomial of degree $3$ is of the form $P(x) = ax^3 + bx^2 + cx + d \:\:\:\: a \ne 0$ and is called a \textbf{cubic function}. 
+	\end{itemize} \\
+\hline
+\end{tabularx}}
+\vspace{24pt}	
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Power Functions}
+	\begin{itemize}
+	\item A function of the form 
+	$$f(x) = x^a$$
+	where $a$ is a constant, is called a \textbf{power function}.
+	\item \textbf{$\bm{a=n}$, where $\bm{n}$ is a positive integer}.
+	\begin{itemize}
+		\item The general shape of the graph of $f(x) = x^n$ depends on whether $n$ is even or odd. If $n$ is even, then $f(x) = x^n$ is an even function and its graph is similar to the parabola $y = x^2$. If $n$ is odd, then $f(x) = x^n$ is an odd function and its graph is similar to that of $y = x^3$. As $n$ increases, the graph of $y = x^n$ becomes flatter near $0$ and steeper when $|x| \geq 1$.
+	\end{itemize}
+	\item \textbf{$\bm{a = 1/n}$, where $\bm{n}$ is a positive integer}
+	\begin{itemize}
+		\item The function $f(x) = x^{1/n} = \sqrt[n]{x}$ is a \textbf{root function}. For even values of $n$, the domain is $[0, \infty)$ and its graph is the upper half of the parabola $x = y^2$. For odd values of $n$, the domain is $\mathbb{R}$.
+	\end{itemize}
+	\item \textbf{$\bm{a = -1}$}
+	\begin{itemize}
+		\item The graph of the \textbf{reciprocal function} $f(x) = x^{-1} = 1/x$ is a hyperbola with the coordinate axes as its asymptotes.
+	\end{itemize}
+	\end{itemize} \\
+\hline
+\end{tabularx}}
+\vspace{12pt}	
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Rational Functions}
+	\begin{itemize}
+	\item A \textbf{rational function} $f$ is a ratio of two polynomials:
+	$$f(x) = \dfrac{P(x)}{Q(x)}$$
+	where $P$ and $Q$ are polynomials.
+	\item The domain consists of all values of $x$ such that $Q(x) \ne 0$.
+	\end{itemize} \\
+\hline
+\end{tabularx}}
+\vspace{12pt}	
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Algebraic Functions}
+	\begin{itemize}
+	\item A function $f$ is called an \textbf{algebraic function} if it can be constructed using algebraic operations (such as addition, subtraction, multiplication, division, and taking roots) starting with polynomials.
+	\item Any rational function is automatically an algebraic function
+	\end{itemize} \\
+\hline
+\end{tabularx}}
+\vspace{12pt}	
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Trigonometric Functions}
+	\begin{itemize}
+	\item For both the sine and cosine functions the domain is $(-\infty, \infty)$ and the range is the closed interval $[-1, 1]$. Thus for all values of $x$, we have
+	$$-1 \le sinx \le 1 \hspace{24pt} -1 \le cosx \le 1$$
+	or in terms of absolute values, \hspace{12pt} $|sinx| \le 1 \hspace{24pt} |cosx| \le 1$
+	\item The zeros of the sine function occur at the integer multiples of $\pi$, that is $sinx = 0$ when $x=n\pi$ and $n$ is an integer.
+	\item An important property of the sine and cosine functions is that they are periodic functions and have period $2\pi$. This means that, for all values of $x$,
+	$$sin(x+2\pi) = sinx \hspace{24pt} cos(x+2\pi) = cosx$$
+	\item The tangent function is related to the sine and cosine functions by the equation
+	$$tanx = \dfrac{sinx}{cosx}$$
+	It is undefined whenever $cosx = 0$. Its range is $(-\infty, \infty)$. It has period $\pi$:
+	$$tan(x+\pi) = tanx$$
+	\item The remaining trig functions cosecant, secant, and cotangent are the reciprocals of the sine, cosine, and tangent functions.
+	\end{itemize} \\
+\hline
+\end{tabularx}}
+\vspace{12pt}	
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Exponential Functions}
+	\begin{itemize}
+	\item \textbf{Exponential functions} are the functions of the form 
+	$$f(x) = a^x$$
+	where the base $a$ is a positive constant.
+	\item The domain is $(-\infty, \infty)$ and the range is $(0,\infty)$
+	\end{itemize} \\
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Logarithmic Functions}
+	\begin{itemize}
+	\item The \textbf{logarithmic functions}
+	$$f(x) = log_a x$$
+	where the base $a$ is a positive constant, are the inverse functions of the exponential functions. 
+	\item The domain is $(0, \infty)$, the range is $(-\infty, \infty)$, and the function increases slowly when $x > 1$.
+	\end{itemize} \\
+\hline
+\end{tabularx}}
+\vspace{64pt}
+
+\Large\textbf{1.3 Transformations of Functions}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+
+\large
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Vertical and Horizontal Shifts} \\[6pt]
+	\hspace{12pt} Suppose $c>0$. To obtain the graph of \\[6pt]
+	\hspace{12pt} $y = f(x) + c$, shift the graph of $y = f(x)$ a distance $c$ units upward \\[3pt]
+	\hspace{12pt} $y = f(x) - c$, shift the graph of $y = f(x)$ a distance $c$ units upward \\[3pt]
+	\hspace{12pt} $y = f(x-c)$, shift the graph of $y = f(x)$ a distance $c$ units to the right \\[3pt]
+	\hspace{12pt} $y = f(x+c)$, shift the graph of $y = f(x)$ a distance $c$ units tothe left \\[12pt]	
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Vertical and Horizontal Stretching and Reflecting} \\[6pt]
+	\hspace{12pt} Suppose $c>1$. To obtain the graph of \\[6pt]
+	\hspace{12pt} $y = cf(x)$, stretch the graph of $y = f(x)$ vertically by a factor of $c$ \\[3pt]
+	\hspace{12pt} $y = (1/c)f(x)$, shrink the graph of $y = f(x)$ vertically by a factor of $c$ \\[3pt]
+	\hspace{12pt} $y = f(cx)$, shrink the graph of $y = f(x)$ horizontally by a factor of $c$ \\[3pt]
+	\hspace{12pt} $y = f(x/c)$, stretch the graph of $y = f(x)$ horizontally by a factor of $c$ \\[3pt]
+	\hspace{12pt} $y = -f(x)$, reflect the graph of $y = f(x)$ about the $x$-axis \\[3pt]
+	\hspace{12pt} $y = f(-x)$, reflect the graph of $y = f(x)$ about the $y$-axis \\[12pt]	
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{3pt}
+	Given two functions $f$ and $g$, the \textbf{composite function} $f \circ g$ (also called the \textbf{composition} of $f$ and $g$) is defined by
+	$$(f \circ g)(x) = f(g(x))$$ 
+	\\
+\hline
+\end{tabularx}}
+\vspace{32pt}
+
+\Large\textbf{1.5 Exponential Functions}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	An \textbf{exponential function} is a function of the form
+	$$f(x) = a^x$$
+	where $a$ is a positive constant. \\[12pt]	
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Law of Exponents} \\[6pt]
+	If $a$ and $b$ are positive numbers and $x$ and $y$ are any real numbers, then
+	$$a^{x+y} = a^x a^y \hspace{32pt} a^{x-y} = \dfrac{a^x}{a^y} \hspace{32pt} (a^x)^y = a^{xy} \hspace{32pt} (ab)^x = a^xb^x$$
+	\\	
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\begin{itemize}
+	\item The choice of base $a$ is influenced by the way the graph of $y = a^x$ crosses the $y$-axis
+	\item The \textbf{natural exponential function}, or $e$, is a base such that the slope of the tangent line to $y = a^x$ at $(0,1)$ is exactly $1$.
+\end{itemize}
+
+\vspace{36pt}	
+
+\Large\textbf{1.6 Inverse functions and Logarithms}
+
+\noindent\hfill\rule{0.3\textwidth}{.4pt}\hfill
+\vspace{12pt}
+
+\large
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	A function $f$ is called a \textbf{one-to-one function} if it never takes on the same value twice; that is, 
+	$$f(x_1) \ne f(x_2) \hspace{12pt} \text{whenever} \hspace{12pt} x_1 \ne x_2$$
+	\\	
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Horizontal Line Test} \\
+	A function is one-to-one if and only if no horizontal line intersects its graph more than once.
+	\\[12pt]	
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	Let $f$ be a one-to-one function with domain $A$ and range $B$. Then its \textbf{inverse function} $f^{-1}$ has domain $B$ and range $A$ and is defined by 
+	$$f^{-1}(y) = x \Leftrightarrow f(x) = y$$
+	for any $y$ in $B$.
+	\\[12pt]	
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\begin{itemize}
+	\item \textbf{Caution:} Do not mistake the $-1$ in $f^{-1}$ for an exponent. \hspace{6pt}
+	$f^{-1}(x) \text{\hspace{5pt} does \textit{not} mean \hspace{5pt}} \dfrac{1}{f(x)}$ \\
+	\item The reciprocal $1/f(x)$ could, however, be written as $[f(x)]^{-1}$
+\end{itemize}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	The letter $x$ is traditionally used as the independent variable, so when we concentrate on $f^{-1}$ rather than on $f$, we usually reverse the roles of $x$ and $y$.
+	$$f^{-1}(x) = y \Leftrightarrow f(y) = x$$
+	\\
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	By substituting for $y$ and $x$, we get the following \textbf{cancellation equations}:
+	$$f^{-1}(f(x)) = x \text{\hspace{5pt}for every\hspace{5pt}} x \text{\hspace{5pt}in \hspace{5pt}} A$$
+	$$f(f^{-1}(x)) = x \text{\hspace{5pt}for every\hspace{5pt}} x \text{\hspace{5pt}in \hspace{5pt}} B$$
+	\\
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{How to Find the Inverse Function of a One-to-One Function $f$}\\[6pt]
+	\hspace{12pt} \textbf{Step 1} \hspace{12pt} Write $y = f(x)$. \\
+	\hspace{12pt} \textbf{Step 2} \hspace{12pt} Solve this equation for $x$ in terms of $y$ (if possible). \\
+	\hspace{12pt} \textbf{Step 3} \hspace{12pt} To express $f^{-1}$ as a function of $x$, interchange $x$ and $y$.\\
+	\hspace{55pt} \hspace{12pt} The resulting equation is $y = f^{-1}(x)$.
+	\vspace{5pt}
+	\begin{itemize}
+	\item The graph of $f^{-1}$ is obtained by reflecting the graph of $f$ about the line $y = x$.
+	\end{itemize}
+	\\[6pt]
+\hline
+\end{tabularx}}
+\vspace{6pt}
+
+
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Logarithmic Functions}
+	\begin{itemize}
+	\item If $a>0$ and $a \ne 1$, the exponential function $f(x) = a^x$ is either increasing or decreasing and so it is one-to-one by the Horizontal Line Test.  
+	\item It therefore has an inverse function $f^{-1}$ which is called the \textbf{logarithmic function with base $a$} and is denoted by $log_a$
+	\item If we use the formulation of an inverse function
+	$$f^{-1}(x) = y \Leftrightarrow f(y) = x$$
+	then we have
+	$$log_ax = y \Leftrightarrow a^y = x$$
+	Thus, if $x>0$, then $log_ax$ is the exponent to which the base $a$ must be raised to give $x$.
+	\item The cancellation equations, when applied to the functions $f(x) = a^x$ and $f^{-1}(x) = log_ax$, become
+	$$log_a(a^x) = x \text{\hspace{5pt}for every\hspace{5pt}} x \in \mathbb{R}$$
+	$$a^{log_as} = x \text{\hspace{5pt}for every\hspace{5pt}} x > 0$$
+	\item The logarithmic function $log_a$ has domain $(0, \infty)$ and range $\mathbb{R}$. Its graph is the reflection of the graph of $y = a^x$ about the line $y = x$
+	\item Since $log_a 1 = 0$, the graphs of all logarithmic functions pass through the point $(1,0)$.
+	\end{itemize}
+	\\[6pt]
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Laws of Logarithms} \:\: If $x$ and $y$ are positive numbers, then \\[10pt]
+	$\text{\textbf{1. }} log_a(xy) = log_ax + log_ay$ \\[10pt]
+	$\text{\textbf{2. }} log_a \Big( \dfrac{x}{y} \Big) = log_ax - log_ay$ \\[10pt]
+	$\text{\textbf{3. }} log_a(x^r) = r \: log_ax \hspace{12pt} \text{where $r$ is any real number}$
+	\\[18pt]
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Natural Logarithms}
+	\begin{itemize}
+	\item The most convenient choice of a base is the number $e$, called the \textbf{natural logarithm}. It has special notation:
+	$$log_e x = ln \: x$$
+	\item If we put $a = e$ and replace $log_e$ with $ln$, then the defining properties of the natural logarithm function become
+	$$ln x = y \Leftrightarrow e^y = x$$
+	$$ln(e^x) = x \hspace{12pt} x \in \mathbb{R}$$
+	$$e^{ln\:x} = x \hspace{12pt} x > 0$$
+	If we set $x=1$, we get
+	$$ln \: e = 1$$
+	
+	\end{itemize}
+	\\
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Change of Base Formula} \:\: For any positive number $a \: (a \ne 1)$, we have
+	$$log_a x = \dfrac{ln \: x}{ln \: a}$$
+	\\
+\hline
+\end{tabularx}}
+\vspace{12pt}
+
+
+\def\arraystretch{1.3}
+{\setlength{\tabcolsep}{16pt}
+\begin{tabularx}{.9\textwidth}{|X|}
+\hline
+	\vspace{1pt}
+	\textbf{Inverse Trigonometric Functions}
+	\begin{itemize}
+	\item \textbf{Inverse sine function (arcsin)}
+	\begin{itemize}
+		\item Since the definition of an inverse function says that
+		$$f^{-1}(x) = y \Leftrightarrow f(y) = x$$
+		we have
+		$$sin^{-1} x = y \Leftrightarrow siny = x \text{\hspace{3pt} and \hspace{3pt}} -\dfrac{\pi}{2} \le y \le \dfrac{\pi}{2}$$
+		\item The cancellation equations then become
+		$$sin^{-1}(sinx) = x \text{\hspace{3pt} for \hspace{3pt}} -\dfrac{\pi}{2} \le x \le \dfrac{\pi}{2}$$
+		$$sin(sin^{-1} x) = x \text{\hspace{3pt} for \hspace{3pt}} -1 \le x \le 1$$
+		\item The inverse sine function has domain $[-1, 1]$ and range $[-\pi/2, \pi/2]$
+	\end{itemize}
+	\vspace{5pt}
+
+	\item \textbf{Inverse cosine function (arccos)}
+	\begin{itemize}
+		\item The restricted cosine function $f(x) = cos x, \: 0 \le x \le \pi$, is one-to-one and so it has an inverse function denoted by $cos^{-1}$ or $arccos$.
+		$$cos^{-1} x = y \Leftrightarrow cos y = x \text{\hspace{3pt} and \hspace{3pt}} 0 \le y \le \pi$$
+		\item The cancellation equations are
+		$$cos^{-1}(cosx) = x \text{\hspace{3pt} for \hspace{3pt}} 0 \le x \le \pi$$
+		$$cos(cos^{-1}x) = x \text{\hspace{3pt} for \hspace{3pt}} -1 \le x \le 1$$
+		\item The inverse cosine function has domain $[-1, 1]$ and range $[0,\pi]$
+	\end{itemize}
+	\vspace{5pt}
+
+	\item \textbf{Inverse tangent function (arctan)}
+	\begin{itemize}
+		\item The tangent function can be made one-to-one by restricting it to the interval $(-\pi/2, \pi/2)$
+		\item Thus the inverse tangent function is defined as the inverse of the function $f(x) = tan x, -\pi/2 < \pi/2$ and is denoted by $tan^{-1}$ or $arctan$
+	$$tan^{-1} x = y \Leftrightarrow tan y = x \text{\hspace{3pt} and \hspace{3pt}} -\dfrac{-\pi}{2} < y < \dfrac{\pi}{2}$$
+	\end{itemize}
+	\vspace{5pt}
+
+	\item \textbf{Other inverse trig functions}
+		$$y = csc^{-1} x(|x| \ge 1) \Leftrightarrow csc y = x \text{\hspace{5pt} and \hspace{5pt}} y \in (0, \pi/2] \cup (\pi, 3\pi/2]$$
+		$$y = sec^{-1} x(|x| \ge 1) \Leftrightarrow sec y = x \text{\hspace{5pt} and \hspace{5pt}} y \in (0, \pi/2] \cup (\pi, 3\pi/2]$$
+		$$y = cot^{-1} x(x \in \mathbb{R}) \Leftrightarrow cot y = x \text{\hspace{5pt} and \hspace{5pt}} y \in (0, \pi)$$
+	\end{itemize} \\
+\hline
+\end{tabularx}}
+\vspace{12pt}	
+
+\end{center}
+\end{document}
