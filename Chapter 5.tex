@@ -1,5 +1,5 @@
 \documentclass[fleqn]{article}
-\usepackage{geometry, mathtools, amssymb, tabularx}
+\usepackage{mathtools, geometry, amssymb, booktabs, array, tabularx, enumitem, pgfplots, tikz}
 \geometry{portrait, margin=.75in}
 \pagestyle{empty}
 \begin{document}
@@ -195,7 +195,6 @@
 \end{itemize}
 \vspace{24pt}
 
-\Large
 \def\arraystretch{1.3}
 {\setlength{\tabcolsep}{16pt}
 \begin{tabularx}{.9\textwidth}{|X X|}
@@ -203,13 +202,13 @@
 	\large\textbf{Table of Indefinite Integrals} & \\[5pt]
 	$\int cf(x)dx = c \int f(x)dx$ & $\int [f(x) + g(x)]dx =$ \\[10pt]
 	$\int k \> dx = kx + C$ & $\int f(x) + \int g(x)dx$ \\[10pt] 
-	$\int x^n dx = \dfrac{x^{n+1}}{n+1} + C \hspace{5pt} (n \ne -1)$ & $\int \dfrac{1}{x} dx = ln|x| + C$ \\[10pt]
-	$\int e^x dx = e^x + C$ & $\int a^x dx = \dfrac{a^x}{ln \> a} + C$ \\[10pt]
-	$\int sinx\>dx = -cosx + C$ & $\int cosx\>dx = sinx +C$ \\[10pt]
-	$\int sec^2x\>dx = tanx + C$ & $\int csc^2x\>dx = -cotx + C$ \\[10pt]
-	$\int secx\>tanx\>dx = secx +C$ & $\int cscx\>cotx\>dx = -cscx + C$ \\[10pt]
-	$\int \dfrac{1}{x^2+1} dx = tan^{-1}x + C$ & $\int \dfrac{1}{\sqrt{1-x^2}} dx = sin^{-1} x + C$ \\[10pt]
-	$\int sinhx \> dx = coshx + C$ & $\int coshx \> dx = sinhx + C$\\[10pt]
+	$\int x^n dx = \dfrac{x^{n+1}}{n+1} + C \hspace{5pt} (n \ne -1)$ & $\int \dfrac{1}{x} dx = \ln|x| + C$ \\[10pt]
+	$\int e^x dx = e^x + C$ & $\int a^x dx = \dfrac{a^x}{\ln \> a} + C$ \\[10pt]
+	$\int \sin x \> dx = -\cos x + C$ & $\int \cos x \> dx = \sin x +C$ \\[10pt]
+	$\int \sec^2x\>dx = \tan x + C$ & $\int \csc^2x\>dx = -\cot x + C$ \\[10pt]
+	$\int \sec x\>\tan x\>dx = \sec x +C$ & $\int \csc x\>\cot x\>dx = -\csc x + C$ \\[10pt]
+	$\int \dfrac{1}{x^2+1} dx = \tan^{-1}x + C$ & $\int \dfrac{1}{\sqrt{1-x^2}} dx = \sin^{-1} x + C$ \\[10pt]
+	$\int \sinh x \> dx = \cosh x + C$ & $\int \cosh x \> dx = \sinh x + C$\\[10pt]
 \hline
 \end{tabularx}}
 \vspace{24pt}
