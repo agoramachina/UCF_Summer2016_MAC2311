@@ -2,6 +2,8 @@
 \usepackage{mathtools, geometry, amssymb}
 \geometry{portrait, margin=1in}
 \pagestyle{empty}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
 \begin{document}
 
 \Huge\textbf{Chapter 3}
@@ -89,8 +91,8 @@
 \[\arraycolsep=16pt\def\arraystretch{2.5}
 \begin{array}{|c c|}
 	\hline
-	\underset{\theta \to 0}{\lim} \dfrac{sin\theta}{\theta} = 1 &
-	\underset{\theta \to 0}{\lim} \dfrac{cos\theta - 1}{\theta} = 0 \\
+	\underset{\theta \to 0}{\lim} \dfrac{\sin\theta}{\theta} = 1 &
+	\underset{\theta \to 0}{\lim} \dfrac{\cos\theta - 1}{\theta} = 0 \\
 	[\medskipamount]
 	\hline
 \end{array}
@@ -103,9 +105,9 @@
 \[\arraycolsep=16pt\def\arraystretch{2.5}
 \begin{array}{| l l |}
 	\hline
-	\frac{d}{dx} sin(x) = cos(x) & \frac{d}{dx} csc (x) = -csc(x) cot(x) \\
-	\frac{d}{dx} cos(x) = -sin(x) & \frac{d}{dx} sec (x) = sec(x) tan(x) \\
-	\frac{d}{dx} tan(x) = sec^2(x) & \frac{d}{dx} cot (x) = -csc^2(x) \\
+	\frac{d}{dx} \sin(x) = \cos(x) & \frac{d}{dx} \csc (x) = -\csc(x) \cot(x) \\
+	\frac{d}{dx} \cos(x) = -\sin(x) & \frac{d}{dx} \sec (x) = \sec(x) \tan(x) \\
+	\frac{d}{dx} \tan(x) = \sec^2(x) & \frac{d}{dx} \cot (x) = -\csc^2(x) \\
 	\hline
 \end{array}
 \]
@@ -150,9 +152,9 @@
 \[\arraycolsep=16pt\def\arraystretch{2.5}
 \begin{array}{| l l |}
 	\hline
-	\frac{d}{dx} sin^{-1}(x) = \dfrac{1}{\sqrt{1-x^2}} & \frac{d}{dx} csc^{-1}(x) =  -\dfrac{1}{x\sqrt{x^2-1}} \\
-	\frac{d}{dx} cos^{-1}(x) = -\dfrac{1}{\sqrt{1-x^2}} & \frac{d}{dx} sec^{-1}(x) = \dfrac{1}{x\sqrt{x^2-1}} \\
-	\frac{d}{dx} tan^{-1}(x) = \dfrac{1}{1+x^2} & \frac{d}{dx} cot^{-1}(x) =  -\dfrac{1}{1+x^2} \\
+	\frac{d}{dx} \sin^{-1}(x) = \dfrac{1}{\sqrt{1-x^2}} & \frac{d}{dx} \csc^{-1}(x) =  -\dfrac{1}{x\sqrt{x^2-1}} \\
+	\frac{d}{dx} \cos^{-1}(x) = -\dfrac{1}{\sqrt{1-x^2}} & \frac{d}{dx} \sec^{-1}(x) = \dfrac{1}{x\sqrt{x^2-1}} \\
+	\frac{d}{dx} \tan^{-1}(x) = \dfrac{1}{1+x^2} & \frac{d}{dx} \cot^{-1}(x) =  -\dfrac{1}{1+x^2} \\
 	[\medskipamount]	
 	\hline
 \end{array}
@@ -172,7 +174,7 @@
 \[\arraycolsep=16pt\def\arraystretch{2.5}
 \begin{array}{| l l l l|}
 	\hline
-	\dfrac{d}{dx} (\log_a x) = \dfrac{1}{x \ln a} & \dfrac{d}{dx} (\ln x) = \dfrac{x'}{x} & \dfrac{d}{dx} ln |x| = \dfrac{1}{x} & \dfrac{d}{dx} e^{f(x)} = e^{f(x)} f'(x) \\
+	\dfrac{d}{dx} (\log_a x) = \dfrac{1}{x \ln a} & \dfrac{d}{dx} (\ln x) = \dfrac{x'}{x} & \dfrac{d}{dx} \ln |x| = \dfrac{1}{x} & \dfrac{d}{dx} e^{f(x)} = e^{f(x)} f'(x) \\
 	[\medskipamount]	
 	\hline
 \end{array}
@@ -217,9 +219,9 @@
 \[\arraycolsep=16pt\def\arraystretch{1.5}
 \begin{array}{| l |}
 	\hline
-	log_b (mn) = log_b(m) + log_b(n) \\
-	log_b \frac{m}{n} = log_b(m) - log_b(n) \\
-	log_b (m^n) = n log_b(m) \\	
+	\log_b (mn) = \log_b(m) + \log_b(n) \\
+	\log_b \frac{m}{n} = \log_b(m) - \log_b(n) \\
+	\log_b (m^n) = n \log_b(m) \\	
 	\hline
 \end{array}
 \]
@@ -269,9 +271,9 @@
 \[\arraycolsep=16pt\def\arraystretch{2.5}
 \begin{array}{| l l |}
 	\hline
-	sinh\> x = \dfrac{e^x - e^{-x}}{2} & csch\> x = \dfrac{1}{sinh\> x} \\
-	cosh\> x = \dfrac{e^x + e^{-x}}{2} & sech\> x = \dfrac{1}{cosh\> x} \\
-	tanh\> x = \dfrac{sinh\> x}{cosh\> x} & coth\> x = \dfrac{cosh\> x}{sinh\> x} \\
+	\sinh\> x = \dfrac{e^x - e^{-x}}{2} & \csch\> x = \dfrac{1}{\sinh\> x} \\
+	\cosh\> x = \dfrac{e^x + e^{-x}}{2} & \sech\> x = \dfrac{1}{\cosh\> x} \\
+	\tanh\> x = \dfrac{\sinh\> x}{\cosh\> x} & \coth\> x = \dfrac{\cosh\> x}{\sinh\> x} \\
 	[\medskipamount]	
 	\hline
 \end{array}
@@ -282,10 +284,10 @@
 \[\arraycolsep=16pt\def\arraystretch{2}
 \begin{array}{| l l |}
 	\hline
-	sinh(-x) = -sinh\> x & cosh(-x) = cosh\> x \\
-	cosh^2x - sinh^2 x = 1 & 1 - tanh^2x = sech^2 x \\
-	\multicolumn{2}{|l|} {sinh(x+y) = sinh\> x \>\> cosh\> y +cosh\> x \>\> sinh\> y} \\
-	\multicolumn{2}{|l|} {cosh(x+y) = cosh\> x \>\> cosh\> y +sinh\> x \>\> sinh\> y} \\
+	\sinh(-x) = -\sinh\> x & \cosh(-x) = \cosh\> x \\
+	\cosh^2x - \sinh^2 x = 1 & 1 - \tanh^2x = \sech^2 x \\
+	\multicolumn{2}{|l|} {\sinh(x+y) = \sinh\> x \> \cosh\> y +\cosh\> x \> \sinh\> y} \\
+	\multicolumn{2}{|l|} {\cosh(x+y) = \cosh\> x \> \cosh\> y +\sinh\> x \> \sinh\> y} \\
 	[\medskipamount]	
 	\hline
 \end{array}
@@ -305,9 +307,9 @@
 \[\arraycolsep=16pt\def\arraystretch{2}
 \begin{array}{| l l |}
 	\hline
-	\frac{d}{dx} (sinh\> x) = cosh\> x & \frac{d}{dx} (csch\> x) = -csch\> x \>\> coth\> x \\
-	\frac{d}{dx} (cosh\> x) = sinh\> x & \frac{d}{dx} (sech\> x) = -sech\> x \>\> tanh\> x \\
-	\frac{d}{dx} (tanh\> x) = sech^2 x & \frac{d}{dx} (coth\> x) = -csch^2 x \\
+	\frac{d}{dx} (\sinh\> x) = \cosh\> x & \frac{d}{dx} (\csch\> x) = -\csch\> x \>\> \coth\> x \\
+	\frac{d}{dx} (\cosh\> x) = \sinh\> x & \frac{d}{dx} (\sech\> x) = -\sech\> x \>\> \tanh\> x \\
+	\frac{d}{dx} (\tanh\> x) = \sech^2 x & \frac{d}{dx} (\coth\> x) = -\csch^2 x \\
 	[\medskipamount]	
 	\hline
 \end{array}
@@ -318,9 +320,9 @@
 \[\arraycolsep=16pt\def\arraystretch{2}
 \begin{array}{| l |}
 	\hline
-	y = sinh^{-1} x \Leftrightarrow sinh\> y = x \\
-	y = cosh^{-1} x \Leftrightarrow cosh\> y = x \>\>\> \text{and} \>\>\> y \geq 0 \\
-	y = tanh^{-1} x \Leftrightarrow tanh\> y = x \\
+	y = \sinh^{-1} x \Leftrightarrow \sinh\> y = x \\
+	y = \cosh^{-1} x \Leftrightarrow \cosh\> y = x \>\>\> \text{and} \>\>\> y \geq 0 \\
+	y = \tanh^{-1} x \Leftrightarrow \tanh\> y = x \\
 	[\medskipamount]	
 	\hline
 \end{array}
@@ -331,9 +333,9 @@
 \[\arraycolsep=16pt\def\arraystretch{2}
 \begin{array}{| l |}
 	\hline
-	sinh^{-1} x = ln(x+ \sqrt{x^2 + 1}) \>\>\>\>\> x \in \mathbb{R} \\
-	cosh^{-1} x = ln(x + \sqrt{x^2 - 1}) \>\>\>\>\> x \geq 1 \\
-	tanh^{-1} x = \dfrac{1}{2} ln \left( \dfrac{1+x}{1-x} \right)t \>\>\>\>\> -1 < x < 1 \\
+	\sinh^{-1} x = \ln(x+ \sqrt{x^2 + 1}) \>\>\>\>\> x \in \mathbb{R} \\
+	\cosh^{-1} x = \ln(x + \sqrt{x^2 - 1}) \>\>\>\>\> x \geq 1 \\
+	\tanh^{-1} x = \dfrac{1}{2} \ln \left( \dfrac{1+x}{1-x} \right)t \>\>\>\>\> -1 < x < 1 \\
 	[\medskipamount]	
 	\hline
 \end{array}
@@ -344,9 +346,9 @@
 \[\arraycolsep=16pt\def\arraystretch{2.5}
 \begin{array}{| l l |}
 	\hline
-	\frac{d}{dx} (sinh^{-1} x) = \dfrac{1}{\sqrt{1 + x^2}} & \frac{d}{dx} (csch^{-1} x) = -\dfrac{1}{|x| \sqrt{x^2 + 1}} \\
-	\frac{d}{dx} (cosh^{-1} x) = \dfrac{1}{\sqrt{x^2 - 1}} & \frac{d}{dx} (sech^{-1} x) = -\dfrac{1}{x \sqrt{1 - x^2}} \\
-	\frac{d}{dx} (tanh^{-1} x) = \dfrac{1}{1 - x^2} & \frac{d}{dx} (coth^{-1} x) = \dfrac{1}{1 - x^2}\\
+	\frac{d}{dx} (\sinh^{-1} x) = \dfrac{1}{\sqrt{1 + x^2}} & \frac{d}{dx} (\csch^{-1} x) = -\dfrac{1}{|x| \sqrt{x^2 + 1}} \\
+	\frac{d}{dx} (\cosh^{-1} x) = \dfrac{1}{\sqrt{x^2 - 1}} & \frac{d}{dx} (\sech^{-1} x) = -\dfrac{1}{x \sqrt{1 - x^2}} \\
+	\frac{d}{dx} (\tanh^{-1} x) = \dfrac{1}{1 - x^2} & \frac{d}{dx} (\coth^{-1} x) = \dfrac{1}{1 - x^2}\\
 	[\medskipamount]	
 	\hline
 \end{array}
